@@ -1,0 +1,69 @@
+.reviews{
+    margin-top: 3rem;
+    h2{
+        text-align: center;
+        color: $color-primary-700;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 3rem;
+        border: black solid 3px;
+        border-radius: 2rem;
+        width: 35%;
+        padding: 1rem 0;
+        cursor: pointer;
+        &:active{
+            transform: scale(.85);
+        }
+        &:hover,&:focus{
+            background-color: rgba(gray, .1);
+        }
+        @media (max-width:$desktopW){
+            font-size: 2rem;
+            width: 50%;
+        }
+    }
+
+    .reviews-list{
+        @media (min-width:$desktopW){
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 2rem;
+            margin-top: 7rem;
+            transition: 1s;
+        }
+        @media (min-width:$desktopW3){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (min-width:$desktopW4){
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        
+        .review{
+            background-color: $color-primary-500;
+            color: $color-neutru-100;
+            padding: 2rem 0;
+            padding-left: 1rem;
+            margin: 4rem 0;
+            @media (min-width:$desktopW){
+                margin: 0;
+            }
+            .review-head{
+                margin-bottom: 2rem;
+                .title{
+                    @include textAdj(none, 700, 1.5rem, 0, $color-neutru-100);
+                    
+                }
+                .email{
+                    @include textAdj(none, 400, 1.2rem, 0, $color-neutru-900);
+                    margin-left: 1.5rem
+                }
+            }
+            
+            .review-body{
+                @include textAdj(none, 400, 1.3rem, 0, $color-neutru-100);
+                width: 90%;
+            }
+        }
+    }
+}

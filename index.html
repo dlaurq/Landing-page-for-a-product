@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Gumari</title>
+</head>
+<body>
+    <header>
+        <!-- hamburger -->
+        <div class="mobile-nav">
+            <div class="hamburger" onclick="slideNav('100%')">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <h1>GUMARI</h1>
+        </div>
+         <!-- Nav bar -->
+        <nav onclick="slideNav('0%')">
+            <div class="nav-content">
+                <div class="titlu">GUMARI</div>
+                <ul>
+                    <li><a href="">Gumari v1.2</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Cart -->
+        <div class="top-cart">
+            <img src="./img/shopping-cart.png" alt="">
+            <div class="cart-counter"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Produs + Poze -->
+        <section class="product">
+            <!-- Poze pt mobil -->
+            <div class="mobile-showcase">
+                <img src="./img/trans.png" alt="" class="showcase-img img0">
+                <div class="next arr" onclick="updateImg('r')"><!-- Sageata dreapta -->
+                    <img src="./img/icon-next.svg" alt="">
+                </div>
+                <div class="prev arr" onclick="updateImg('l')"><!-- Sageata stanga -->
+                    <img src="./img/icon-previous.svg" alt="">
+                </div>
+            </div>
+
+            <!-- Poze desktop -->
+            <div class="product-showcase desktop">
+                <img src="./img/1.png" alt="" class="main-img">
+                <div class="slideshow">
+                    <img src="./img/1.png" alt="" onclick="changeImgDesktop('./img/1.png')">
+                    <img src="./img/2.png" alt="" onclick="changeImgDesktop('./img/2.png')">
+                    <img src="./img/3.png" alt="" onclick="changeImgDesktop('./img/3.png')">
+                    <img src="./img/4.png" alt="" onclick="changeImgDesktop('./img/4.png')">
+                </div>
+            </div>
+
+            <!-- Produs -->
+            <div class="product-desc">
+                <!-- Text -->
+                <h3>By sneakerheads for sneakerheads</h3>
+                <h2>Gumari v1.2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam mollitia nulla maiores libero! Eveniet error provident facere ab hic, quae sapiente dolorem, ad nesciunt aut modi fugiat velit unde et.</p>
+                
+                <!-- Pret -->
+                <div class="price-info">
+                    <div class="prc">
+                        <div class="price">$100</div>
+                        <div class="price-disc">50%</div>
+                    </div>
+                    <div class="old-price">$200</div>
+                </div>
+
+                <!-- Buton de + si - plus input cantitate -->
+                <div class="cart">
+                    <div class="counter">
+                        <input type="button" value="-" class="btn minBtn" onclick="updateCounter('-')">
+                        <input type="number" name="nr" id="nr" oninput="setCounter()">
+                        <input type="button" value="+" class="btn plusBtn" onclick="updateCounter('+')">
+                    </div>
+                    <!-- Add to cart -->
+                    <input type="button" value="Add to cart" class="addBtn" onclick="addToCart()">
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews">
+            <h2 onclick="showReviews()">Reviews</h2>
+            <div class="reviews-list">
+
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
