@@ -107,7 +107,7 @@ let $reviews = $('.reviews-list');
 function showReviews(){
   $.ajax({
     type: 'GET',
-    url: 'http://jsonplaceholder.typicode.com/comments',
+    url: 'https://jsonplaceholder.typicode.com/comments',
     success: function(reviews){
       $.each(reviews, function(i,review){
         if(parseInt(review.id) <11)
